@@ -4,6 +4,8 @@ It has a multitude of great functions, such as calculating ABV, determining carb
 
 Written in Rust, using GTK3
 
+The original author no longer maintains this package (at least publicly), so I decided to download the source and upload to github in case anyone else is interested in it. 
+
 ## New In 6.2.0
   * * Annotated types to all variables
   * * Cleaned up unnecessary logic in `realABVFormatting()`
