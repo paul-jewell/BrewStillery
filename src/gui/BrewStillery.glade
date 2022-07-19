@@ -1,0 +1,2751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.22.0 -->
+<interface>
+  <requires lib="gtk+" version="3.20"/>
+  <!-- interface-css-provider-path BrewStillery.css -->
+  <object class="GtkApplicationWindow" id="mainWindow">
+    <property name="width_request">750</property>
+    <property name="height_request">720</property>
+    <property name="can_focus">False</property>
+    <property name="default_width">610</property>
+    <property name="default_height">720</property>
+    <property name="icon">/usr/share/BrewStillery/BrewStilleryLogo.png</property>
+    <child>
+      <object class="GtkNotebook">
+        <property name="visible">True</property>
+        <property name="can_focus">True</property>
+        <property name="scrollable">True</property>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="generalTab">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="halign">center</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Estimate ABV From Starting Brix</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="label" translatable="yes">Starting Brix</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="guestimatorStartingBrix">
+                        <property name="width_request">220</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Starting Brix</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="guestimatorABV">
+                        <property name="width_request">220</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Estimated ABV</property>
+                        <property name="halign">center</property>
+                        <property name="editable">False</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">17</property>
+                        <property name="label" translatable="yes">Estimated ABV</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">17</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Sugar Needed To Increase ABV</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="increaseABVUnits">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="active">0</property>
+                        <items>
+                          <item id="imperialGB" translatable="yes">Imperial (British)</item>
+                          <item id="imperialUS" translatable="yes">Imperial (US)</item>
+                          <item id="metric" translatable="yes">Metric</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">33</property>
+                            <property name="margin_top">7</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Starting Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">100</property>
+                            <property name="margin_top">7</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Desired ABV</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">74</property>
+                            <property name="margin_right">5</property>
+                            <property name="margin_top">7</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Current Volume</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkEntry" id="increaseABVStartingBrix">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Starting Brix</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="increaseABVDesiredABV">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Desired ABV</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="increaseABVCurrentVolume">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Current Volume</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkEntry" id="increaseABVFinalBrix">
+                            <property name="width_request">220</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">New Starting Brix</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <property name="margin_bottom">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">New Starting Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">10</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkEntry" id="increaseABVSugar">
+                            <property name="width_request">220</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Sugar To Add</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">13</property>
+                            <property name="margin_right">13</property>
+                            <property name="label" translatable="yes">Or</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="increaseABVHoney">
+                            <property name="width_request">220</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Honey To Add</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">11</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_right">70</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Amount Of Sugar To Add</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">70</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Amount Of Honey To Add</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">12</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Real ABV From Starting And Final Brix</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">13</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_right">110</property>
+                            <property name="margin_top">7</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Starting Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">40</property>
+                            <property name="margin_right">15</property>
+                            <property name="margin_top">7</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Final Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">14</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkEntry" id="realABVStartingBrix">
+                            <property name="width_request">200</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Starting Brix</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="realABVFinalBrix">
+                            <property name="width_request">200</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Final Brix</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">15</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkEntry" id="realABVFinalABV">
+                            <property name="width_request">200</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Real Attenuation</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="realABVRealAttenuation">
+                            <property name="width_request">200</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Real ABV</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">16</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">55</property>
+                            <property name="margin_right">30</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Real ABV</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">93</property>
+                            <property name="margin_right">25</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Real Attenuation</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">17</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="generalTabLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">General</property>
+            <style>
+              <class name="tabLabel"/>
+            </style>
+          </object>
+          <packing>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="beerTab">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Estimate ABV From Grain</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="grainABVUnits">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="active">0</property>
+                        <items>
+                          <item id="imperialGB" translatable="yes">Imperial (British)</item>
+                          <item id="imperialUS" translatable="yes">Imperial (US)</item>
+                          <item id="metric" translatable="yes">Metric</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="label" translatable="yes">Wort Volume</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="grainABVWortVolume">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Wort Volume</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">5</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_right">175</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="label" translatable="yes">Amount Of Grain</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkGrid">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkEntry" id="grainABVFirstAmount">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVSecondAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVThirdAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVFourthAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVFifthAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVSixthAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVSeventhAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Amount</property>
+                            <property name="margin_right">1</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVFirstType">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVSecondType">
+                            <property name="width_request">160</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVThirdType">
+                            <property name="width_request">160</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVFourthType">
+                            <property name="width_request">160</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVFifthType">
+                            <property name="width_request">160</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVSixthType">
+                            <property name="width_request">160</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkComboBoxText" id="grainABVSeventhType">
+                            <property name="width_request">160</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">1</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="active">0</property>
+                            <property name="active_id">2-Row</property>
+                            <items>
+                              <item id="2-Row" translatable="yes">2-Row (1.8°L)</item>
+                              <item id="6-Row" translatable="yes">6-Row (1.8°L)</item>
+                              <item id="Black" translatable="yes">Black (500°L)</item>
+                              <item id="Caramel 60" translatable="yes">Caramel (60°L)</item>
+                              <item id="Caramel 80" translatable="yes">Caramel (80°L)</item>
+                              <item id="Caramel 120" translatable="yes">Caramel (120°L)</item>
+                              <item id="Chocolate" translatable="yes">Chocolate (350°L)</item>
+                              <item id="Corn" translatable="yes">Corn (1.3°L)</item>
+                              <item id="Dextrine" translatable="yes">Dextrine (1.5°L)</item>
+                              <item id="Oat" translatable="yes">Oat (1.0°L)</item>
+                              <item id="Rice" translatable="yes">Rice (1.0°L)</item>
+                              <item id="Rye" translatable="yes">Rye (2.0°L)</item>
+                              <item id="Wheat" translatable="yes">Wheat (1.6°L)</item>
+                            </items>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">6</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkEntry" id="grainABVFinalBrix">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Estimated Starting Brix</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="grainABVFinalABV">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Estimated ABV</property>
+                            <property name="halign">center</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_right">50</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Estimated Starting Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">15</property>
+                            <property name="margin_right">25</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Estimated ABV </property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="grainABVGlassSize">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="active">0</property>
+                        <property name="active_id">2-Row</property>
+                        <items>
+                          <item id="Dimple Pint" translatable="yes">Dimple Pint</item>
+                          <item id="Nonick Pint" translatable="yes">Nonick Pint</item>
+                          <item id="Tulip Pint" translatable="yes">Tulip Pint</item>
+                          <item id="Pilsner" translatable="yes">Pilsner</item>
+                          <item id="Maß" translatable="yes">Maß</item>
+                          <item id="Dimple Half Pint" translatable="yes">Dimple Half Pint</item>
+                          <item id="Nonick Half Pint" translatable="yes">Nonick Half Pint</item>
+                          <item id="Tulip Half Pint" translatable="yes">Tulip Half Pint</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">8</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkOverlay" id="grainABVColourOverlay">
+                        <property name="width_request">192</property>
+                        <property name="height_request">240</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="sensitive">False</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                          </object>
+                          <packing>
+                            <property name="index">-1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">9</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">3</property>
+                        <property name="margin_bottom">17</property>
+                        <property name="label" translatable="yes">Expected Colour</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">10</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Total Water Needed</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">11</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="waterSpargeUnits">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="active">0</property>
+                        <items>
+                          <item id="imperialGB" translatable="yes">Imperial (British)</item>
+                          <item id="imperialUS" translatable="yes">Imperial (US)</item>
+                          <item id="metric" translatable="yes">Metric</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">12</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">33</property>
+                            <property name="margin_right">5</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Pre-Fermentation Volume</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">60</property>
+                            <property name="margin_right">65</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Total Grain</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">30</property>
+                            <property name="margin_right">49</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Boil Time (minutes)</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">13</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkEntry" id="spargePreFermentVolume">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Pre-Fermentation Volume</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="spargeTotalGrain">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Total Grain</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="spargeBoilTime">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">14</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkEntry" id="spargeMashWater">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Mash Water</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="spargeSpargeWater">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Sparge Water</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="spargeTotalWater">
+                            <property name="width_request">175</property>
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Total Water</property>
+                            <property name="editable">False</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">15</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_right">40</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Mash Water</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">70</property>
+                            <property name="margin_right">70</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Sparge Water</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">30</property>
+                            <property name="margin_right">10</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">17</property>
+                            <property name="label" translatable="yes">Total Water</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">16</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Total IBU</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">17</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="totalIBUUnits">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="active">0</property>
+                        <items>
+                          <item id="imperialGB" translatable="yes">Imperial (British)</item>
+                          <item id="imperialUS" translatable="yes">Imperial (US)</item>
+                          <item id="metric" translatable="yes">Metric</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">18</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">50</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Pre-Boil Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">90</property>
+                            <property name="margin_right">50</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Wort Volume</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">19</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUPreBoilBrix">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Pre-Boil Brix</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUWortVolume">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Wort Volume</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">20</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">70</property>
+                            <property name="margin_right">40</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Alpha Acid %</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">50</property>
+                            <property name="margin_right">25</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Hop Amount</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">False</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_left">50</property>
+                            <property name="margin_right">50</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Boil Time (minutes)</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">21</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkGrid" id="ibuGrid">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_left">40</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">1st Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFirstHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFirstHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">2nd Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSecondHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">3rd Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">4th Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">5th Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">6th Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="halign">center</property>
+                            <property name="margin_top">5</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="label" translatable="yes">7th Hop</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="left_attach">0</property>
+                            <property name="top_attach">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUThirdHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFourthHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSixthHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSeventhHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUThirdHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFourthHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFifthHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSixthHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSeventhHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">6</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFifthHopAlpha">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Alpha Acid %</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">1</property>
+                            <property name="top_attach">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSecondHopAmount">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Hop Amount</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">2</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFirstHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSecondHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUThirdHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">2</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFourthHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">3</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUFifthHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">4</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSixthHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="margin_bottom">3</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">5</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="totalIBUSeventhHopBoilTime">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Boil Time (minutes)</property>
+                            <property name="halign">center</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="left_attach">3</property>
+                            <property name="top_attach">6</property>
+                          </packing>
+                        </child>
+                        <style>
+                          <class name="ibuGrid"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">22</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="totalIBUFinal">
+                        <property name="width_request">300</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Total IBU</property>
+                        <property name="halign">center</property>
+                        <property name="editable">False</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">23</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">17</property>
+                        <property name="label" translatable="yes">Total IBU</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">24</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Gyle For Carbonation</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">25</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="gyleCarbonationUnits">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="active">0</property>
+                        <items>
+                          <item id="imperialGB" translatable="yes">Imperial (British)</item>
+                          <item id="imperialUS" translatable="yes">Imperial (US)</item>
+                          <item id="metric" translatable="yes">Metric</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">26</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">4</property>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Starting Brix</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_left">65</property>
+                            <property name="margin_right">65</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Desired CO2 Level (g/L)</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="margin_top">3</property>
+                            <property name="margin_bottom">7</property>
+                            <property name="label" translatable="yes">Wort Volume</property>
+                            <style>
+                              <class name="entryLabelText"/>
+                            </style>
+                          </object>
+                          <packing>
+                            <property name="expand">True</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">27</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkBox">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <child>
+                          <object class="GtkEntry" id="gyleStartingBrix">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Starting Brix</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">0</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="gyleDesiredCO2">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Desired CO2 Level (g/L)</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">1</property>
+                          </packing>
+                        </child>
+                        <child>
+                          <object class="GtkEntry" id="gyleWortVolume">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="tooltip_text" translatable="yes">Wort Volume</property>
+                            <property name="xalign">0.5</property>
+                          </object>
+                          <packing>
+                            <property name="expand">False</property>
+                            <property name="fill">True</property>
+                            <property name="position">2</property>
+                          </packing>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">28</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="gyleCarbonationOutput">
+                        <property name="width_request">300</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Gyle To Reserve</property>
+                        <property name="halign">center</property>
+                        <property name="editable">False</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">29</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">17</property>
+                        <property name="label" translatable="yes">Volume Of Gyle To Reserve</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">30</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="beerTabLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Beer</property>
+            <style>
+              <class name="tabLabel"/>
+            </style>
+          </object>
+          <packing>
+            <property name="position">1</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="champagneTab">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">17</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="label" translatable="yes">Sugar Needed To Carbonate Still Wine</property>
+                        <style>
+                          <class name="sectionTitle"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="padding">7</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkComboBoxText" id="champagneCarbonationUnits">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">3</property>
+                        <property name="active">0</property>
+                        <items>
+                          <item id="imperialGB" translatable="yes">Imperial (British)</item>
+                          <item id="imperialUS" translatable="yes">Imperial (US)</item>
+                          <item id="metric" translatable="yes">Metric</item>
+                        </items>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="label" translatable="yes">Volume To Carbonate</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="champagneCarbonationVolume">
+                        <property name="width_request">200</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Volume To Carbonate</property>
+                        <property name="halign">center</property>
+                        <property name="margin_bottom">7</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkEntry" id="champagneCarbonationSugar">
+                        <property name="width_request">200</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="tooltip_text" translatable="yes">Sugar To Add</property>
+                        <property name="halign">center</property>
+                        <property name="editable">False</property>
+                        <property name="xalign">0.5</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="halign">center</property>
+                        <property name="margin_top">7</property>
+                        <property name="margin_bottom">17</property>
+                        <property name="label" translatable="yes">Amount Of Sugar To Add</property>
+                        <style>
+                          <class name="entryLabelText"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">5</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="champagneTabLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Champagne</property>
+            <style>
+              <class name="tabLabel"/>
+            </style>
+          </object>
+          <packing>
+            <property name="position">2</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox" id="glossaryTab">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                    <child>
+                      <placeholder/>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="infoTabLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">Info</property>
+            <style>
+              <class name="tabLabel"/>
+            </style>
+          </object>
+          <packing>
+            <property name="position">3</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="shadow_type">in</property>
+            <child>
+              <object class="GtkViewport">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkImage" id="brewStilleryLogo">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="pixbuf">/usr/share/BrewStillery/BrewStilleryLogo.png</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">0</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLabel" id="versionNumber">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="margin_top">5</property>
+                        <property name="margin_bottom">5</property>
+                        <property name="label" translatable="yes">Version 6.2.0</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLinkButton" id="websiteLink">
+                        <property name="label" translatable="yes">Visit Our Website</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="relief">none</property>
+                        <property name="uri">https://monkeylog.in</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLinkButton" id="githubLink">
+                        <property name="label" translatable="yes">Visit Us On github</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="relief">none</property>
+                        <property name="uri">https://github.com/MonkeyLog/BrewStillery</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkLinkButton" id="cratesLink">
+                        <property name="label" translatable="yes">Visit Us On crates.io</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="receives_default">True</property>
+                        <property name="relief">none</property>
+                        <property name="uri">https://crates.io/crates/BrewStillery</property>
+                      </object>
+                      <packing>
+                        <property name="expand">False</property>
+                        <property name="fill">True</property>
+                        <property name="position">4</property>
+                      </packing>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child type="tab">
+          <object class="GtkLabel" id="aboutTabLabel">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">About</property>
+            <style>
+              <class name="tabLabel"/>
+            </style>
+          </object>
+          <packing>
+            <property name="position">4</property>
+            <property name="tab_fill">False</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+    <child type="titlebar">
+      <object class="GtkHeaderBar" id="titleBar">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="title">BrewStillery</property>
+        <property name="subtitle">6.2.0</property>
+        <property name="show_close_button">True</property>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

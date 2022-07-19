@@ -1,0 +1,34 @@
+[package]
+name = "BrewStillery"
+version = "6.2.0"
+authors = ["Meade <thedarkula2049@gmail.com>", "Emily <marleybrush5@gmail.com>"]
+description = "BrewStillery is a brewer's, vintner's, and distiller's calculator. It has a multitude of great functions, such as calculating ABV, determining carbonation, and total sparge water needed."
+# documentation to come
+# documentation = "..."
+homepage = "https://monkeylog.in"
+repository = "https://github.com/MonkeyLog/BrewStillery"
+readme = "README.md"
+keywords = ["beer", "wine", "champagne", "distilling", "calculator"]
+categories = ["science", "gui"]
+license = "AGPL-3.0"
+
+[badges]
+maintenance = { status = "actively-developed" }
+
+[dependencies.gtk]
+version = "0.4.1"
+features = ["v3_22"]
+
+[dependencies]
+gdk = "0.8.0"
+gio = "0.4.0"
+
+[features]
+default = []
+
+[profile.dev]
+
+[profile.release]
+opt-level = 3
+codegen-units = 1
+lto = true
